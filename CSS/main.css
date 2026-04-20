@@ -1,17 +1,32 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
 
 @theme {
-  /* Breakpoints */
   --breakpoint-sm: 480px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 976px;
   --breakpoint-xl: 1440px;
 
-  /* Official Clipboard Colors */
   --color-strong-cyan: hsl(171, 66%, 44%);
   --color-light-blue: hsl(233, 100%, 69%);
   --color-dark-grayish-blue: hsl(210, 10%, 33%);
   --color-grayish-blue: hsl(201, 11%, 66%);
-  /* fonts */
+  
   --font-sans: "Bai Jamjuree", sans-serif;
+
+  /* Use the --background-image- prefix for automatic Utility Class generation */
+  --background-image-header-mobile: url("../images/bg-header-mobile.png");
+  --background-image-header-desktop: url("../images/bg-header-desktop.png");
+}
+
+
+/* In main.css */
+.section-container {
+  max-width: var(--breakpoint-lg); /* Uses your theme variable */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-inline: var(--spacing-10);
+  margin-bottom: var(--spacing-40);
+  padding-top: var(--spacing-20);
 }
