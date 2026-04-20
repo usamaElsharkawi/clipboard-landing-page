@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+CSS/output.css
+
+# Optional: Ignore editor settings
+.vscode/
+.idea/
