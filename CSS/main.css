@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+@import "tailwindcss";
 
 @theme {
   --breakpoint-sm: 480px;
@@ -14,19 +14,7 @@
   
   --font-sans: "Bai Jamjuree", sans-serif;
 
-  /* Use the --background-image- prefix for automatic Utility Class generation */
+  /* background images */
   --background-image-header-mobile: url("../images/bg-header-mobile.png");
   --background-image-header-desktop: url("../images/bg-header-desktop.png");
-}
-
-
-/* In main.css */
-.section-container {
-  max-width: var(--breakpoint-lg); /* Uses your theme variable */
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding-inline: var(--spacing-10);
-  margin-bottom: var(--spacing-40);
-  padding-top: var(--spacing-20);
 }

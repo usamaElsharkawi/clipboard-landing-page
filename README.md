@@ -21,14 +21,22 @@ While the original course uses **Tailwind v3**, this project serves as a "Transl
 
 ---
 
-## ⚡ Architectural Deep Dive: Outside-In Construction
+## ⚡ Architectural Deep Dive: Interface & Psychology
 
 In this project, we implement the **Architect's Mental Model** for building interfaces:
 
-1.  **The Invisible Cage (The Wrapper):** Using `section-container` to enforce readabilty limits and horizontal centering across all viewports.
-2.  **The Rhythm (Spacial Balance):** Prioritizing "Oxygenated" design with significant vertical margins (`mb-40`) to separate distinct psychological phases of the user journey.
-3.  **The SEO Anchor:** Ensuring proper document hierarchy by utilizing a single `<h1>` for the Hero headline, anchoring the search engine's understanding of the site's primary purpose.
-4.  **The Micro-Interaction Loop:** Adding feedback layers like `active:scale-95` to buttons to transform "links" into "interactive objects."
+### 1. Spatial Layout (Outside-In)
+- **The Invisible Cage:** Using `max-w-6xl` (`72rem`) to enforce width limits and `mx-auto` for perfect horizontal centering across all viewports.
+- **The Rhythm & Oxygen:** Prioritizing padding and margins (`mb-40`, `pt-20`) to separate distinct psychological phases of the user journey.
+- **REM Math & Accessibility:** Discarded hard pixels for `rem`. By using `rem`, if a visually impaired user increases their browser font size, our rigid invisible walls scale up gracefully, respecting user OS settings.
+
+### 2. Interface Psychology 
+- **Optimal Line Length (Cognitive Load):** Mastered the "Goldilocks Zone" of reading. While outer containers manage layout (`max-w-6xl`), inner paragraphs are restricted (`max-w-3xl`) to ~75 characters to prevent eye fatigue and reduce saccade distance.
+- **The "Picture Frame" Backgrounds:** Differentiated between `bg-contain` (don't cut the picture, but allow empty letterboxing) and `bg-cover` (fill the entire frame, crop if necessary).
+
+### 3. Advanced Tailwind Philosophy
+- **The Suffix vs. The Tripwire:** Demystified Tailwind's syntax: simple suffixes (like `max-w-6xl` or `shadow-lg`) represent physical T-Shirt sizes, while prefixed colons (`md:flex-row`) act as mobile-first conditional tripwires.
+- **The Ultimate Component Law:** Embraced the strict v4 ruling: *"Abstract your markup, never your style."* Purged all `@apply` CSS in favor of raw utility classes to prevent CSS Cascade Traps and preserve HTML as the ultimate Single Source of Truth.
 
 ---
 
@@ -37,7 +45,3 @@ In this project, we implement the **Architect's Mental Model** for building inte
 - **Strong Cyan:** `hsl(171, 66%, 44%)` (Primary Action)
 - **Light Blue:** `hsl(233, 100%, 69%)` (Secondary Action)
 - **Primary Font:** Bai Jamjuree (Modern Sans-Serif)
-
----
-
-
